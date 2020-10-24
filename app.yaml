@@ -1,0 +1,23 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+  skip_files: -.env
+
+env_variables:
+    APP_LOG: errorlog
+    APP_KEY: base64:dr4TuJMPk2Lp9FIUjZv41Ujc7nupBO5HV4A3xQF2+bo=
+    APP_DEBUG: true
+    DB_CONNECTION: mysql
+    DB_HOST: 127.0.0.1
+    DB_PORT: 306
+    DB_DATABASE: patient_scheduler
+    DB_USERNAME: mathews
+    DB_PASSWORD: root
+    STORAGE_DIR: /tmp
+    DB_SOCKET: "/cloudsql/patientscheduler:us-central1:scheduler"
+
+beta_settings:
+  cloud_sql_instances: "patientscheduler:us-central1:scheduler"
