@@ -15,7 +15,7 @@ class Patient extends Model
     public static function addPatient($patient_number, $location, $user_id)
     {
         return self::create([
-            "patient_id" => $patient_number,
+            "patient_name" => $patient_number,
             "location" => $location,
             "registered_by" => $user_id
         ]);
